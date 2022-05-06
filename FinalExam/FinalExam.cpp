@@ -15,7 +15,7 @@ using namespace std;
 //Fuction Prototypes.
 void enterData(int matrix[][MAX_COLUMN],int maxRow);
 void zeroOutData(int matrix[][MAX_COLUMN], int maxRow);
-
+void showData(int matrix[][MAX_COLUMN], int maxRow);
 
 /**
 *Present a menu to the users 
@@ -32,7 +32,8 @@ int main()
         cout << "\n1) Enter data in matrix";
         cout << "\n2) Zero out data in matrix";
         cout << "\n3) Are all values positive";
-        cout << "\n4)Exit";
+        cout << "\n4)Show the data.";
+        cout << "\n)Exit";
         cout << "\nPlease enter choice:";
         cin >> choice;
 
@@ -48,8 +49,10 @@ int main()
         case 3:
             break;
 
-
         case 4:
+            break;
+
+        case 5:
             //No code needed
             break;
 
@@ -59,7 +62,7 @@ int main()
 
 
         }
-    } while (4 != choice); {
+    } while (5 != choice); {
         cout << "Thankyou.";
     }
 
@@ -108,3 +111,21 @@ void zeroOutData(int matrix[][MAX_COLUMN], int maxRow)
     }
 
 }
+
+/**
+*Show the data of matrix.
+*@param matrix The matrix to be filled in
+*@param maxRow the number of rows in the matrix.
+*/
+void showData(int matrix[][MAX_COLUMN], int maxRow) {
+    assert(maxRow > 0);
+    for (int i = 0; i < maxRow; i++) {
+        for (int j = 0; j < MAX_COLUMN; j++) {
+
+            cout << matrix[i][j] << "\t";
+        }
+    
+    }
+}
+
+
