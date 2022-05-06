@@ -33,7 +33,7 @@ int main()
         cout << "\n2) Zero out data in matrix";
         cout << "\n3) Are all values positive";
         cout << "\n4)Show the data.";
-        cout << "\n)Exit";
+        cout << "\n5)Exit";
         cout << "\nPlease enter choice:";
         cin >> choice;
 
@@ -50,6 +50,7 @@ int main()
             break;
 
         case 4:
+            showData(matrix,MAX_ROW);
             break;
 
         case 5:
